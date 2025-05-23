@@ -9,13 +9,15 @@ const images = [
   '/images/home2.webp',
   '/images/home3.webp',
   '/images/home5.webp',
+  '/images/p4.webp',
+  '/images/home6.webp'
 ];
 
 const containerVariants = {
   initial: {},
   animate: {
     transition: {
-      staggerChildren: 0.3, // Stagger the animations of children
+      staggerChildren: 0.3, 
     },
   },
 };
@@ -64,14 +66,14 @@ export default function Hero() {
       {/* Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-5 top-1/2 transform -translate-y-1/2 z-20 bg-opacity-50 p-2 rounded-full hover:bg-opacity-75"
+        className="absolute left-5 top-1/2 transform -translate-y-1/2 z-10 bg-opacity-50 p-2 rounded-full hover:bg-opacity-75"
       >
         <ChevronLeft size={32} />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-5 top-1/2 transform -translate-y-1/2 z-20 bg-opacity-50 p-2 rounded-full hover:bg-opacity-75"
+        className="absolute right-5 top-1/2 transform -translate-y-1/2 z-10 bg-opacity-50 p-2 rounded-full hover:bg-opacity-75"
       >
         <ChevronRight size={32} />
       </button>
@@ -98,12 +100,13 @@ export default function Hero() {
     >
       BEST LiDAR AND PHOTOGRAMMETRY GROUP
     </motion.h2>
+    <a href="/ContactUs">
     <motion.button
       variants={buttonVariants}
       className="bg-blue-600 px-6 py-2 rounded hover:bg-blue-700 text-white font-medium"
     >
       Contact Now
-    </motion.button>
+    </motion.button></a>
   </motion.div>
 </AnimatePresence>
 
