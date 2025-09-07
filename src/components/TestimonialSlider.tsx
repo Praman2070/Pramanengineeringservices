@@ -1,5 +1,5 @@
 "use client";
-
+import Image from 'next/image';
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -12,28 +12,23 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     name: "Mayank",
-    title: "CEO, B Construction",
+    title: "Founder",
     message:
-      "All architectural services are handled by qualified CAD specialists by a very friendly crew. Best 3D BIM Modeling service in Gujarat. It comes highly recommended. Must give it a shot.",
+      "All architectural services are handled by qualified CAD specialists by a very friendly crew. Best 3D BIM Modeling service in Gujarat.",
   },
   {
-    name: "PARTH PANCHAL",
-    title: "MD, Softtonic Inc.",
+    name: "Vikas sandheliya",
+    title: "Co-founder",
     message:
-      "They presented new concepts that were outside of our scope. Best Virtual Reality service provider in Ahmedabad. Their members approach assured that my project was in good hands.",
+      "They presented new concepts that were outside of our scope. Their members approach assured that my project was in good hands.",
   },
   {
-    name: "RAVI SHAH",
-    title: "CTO, VisionTech",
+    name: "Nishant katare",
+    title: "Co-founder",
     message:
       "Amazing attention to detail and project management. The LiDAR data processing was top notch and helped us meet tight deadlines with confidence.",
   },
-  {
-    name: "MEGHA PATEL",
-    title: "Project Lead, ArchiStudio",
-    message:
-      "They provided incredible photogrammetry models that helped visualize our concepts more effectively. Reliable and efficient team!",
-  },
+  
 ];
 
 export default function TestimonialSlider() {
@@ -72,11 +67,15 @@ export default function TestimonialSlider() {
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-14 h-14 border-2 border-dotted border-blue-600 rounded-sm flex items-center justify-center">
-                  <img
-                    src="/images/user.png"
-                    alt="avatar"
-                    className="w-10 h-10"
+
+                  <Image
+                    src="/images/test.png"
+                    alt="Testimonial"
+                    width={300}       
+                    height={300}      
+                    className="rounded-full object-cover"
                   />
+
                 </div>
                 <div>
                   <h3 className="text-green-600 font-semibold text-lg">{t.name}</h3>
